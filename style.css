@@ -1,7 +1,8 @@
-/* Paleta de Cores: Totalmente focado em Preto, Tons de Azul Escuro e Ciano para os destaques */
+/* Paleta de Cores: Totalmente focado em Preto, Cinza Escuro e Tons de Azul/Ciano */
 :root {
     --bg-black: #050508;
     --bg-dark-blue: #0a1128;
+    --bg-dark-gray: #121214; /* NOVO: O cinza escuro para substituir o branco antigo */
     --card-blue: #1c2541;
     --accent-cyan: #00b4d8;
     --accent-blue: #0077b6;
@@ -22,10 +23,19 @@ body {
     line-height: 1.6;
 }
 
+/* Onde era o fundo branco principal (como Quem Somos e Nosso Projeto), agora é Cinza Escuro */
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 80px 20px;
+}
+
+section.container {
+    background-color: var(--bg-dark-gray); /* Aplica o cinza escuro no fundo das seções principais */
+    border-radius: 16px; /* Deixa os cantos levemente arredondados para um visual premium */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.03); /* Linha sutil para destacar o cinza do fundo preto */
 }
 
 /* Tipografia */
@@ -172,9 +182,10 @@ nav a:hover {
 
 .bg-deep-blue {
     background-color: var(--bg-dark-blue);
+    padding: 40px 0;
 }
 
-/* Estilização das Imagens vindas do PDF */
+/* Estilização das Imagens */
 .img-container {
     display: flex;
     justify-content: center;
@@ -194,7 +205,6 @@ nav a:hover {
     transform: scale(1.02);
 }
 
-/* Ajuste específico para o formato do mascote */
 .site-img.mascote {
     max-height: 350px;
     object-fit: contain;
@@ -304,4 +314,5 @@ footer p {
     h2 { text-align: center; }
     .cta-buttons.center { flex-direction: column; }
     .btn.outline { margin-left: 0; }
+    section.container { margin: 20px 10px; padding: 40px 20px; }
 }
