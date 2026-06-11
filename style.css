@@ -6,7 +6,7 @@
     --card-blue: #1c2541;
     --accent-cyan: #00b4d8;
     --accent-blue: #0077b6;
-    --accent-green: #06d6a0; /* Cor para destacar o botão Open Source */
+    --accent-green: #06d6a0; /* Cor de reprodutibilidade aberta */
     --text-white: #f4f5f7;
     --text-gray: #94a3b8;
 }
@@ -57,6 +57,10 @@ h3 {
     color: var(--text-white);
     margin-top: 20px;
     margin-bottom: 15px;
+}
+
+.text-center {
+    text-align: center !important;
 }
 
 p {
@@ -139,6 +143,36 @@ nav a:hover {
     margin-bottom: 35px;
     font-weight: 300;
     color: var(--text-gray);
+}
+
+/* Grid do Projeto Especial (Libras, Sinalário, Oficina) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.project-box {
+    background-color: var(--card-blue);
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-box h3 {
+    color: var(--accent-cyan);
+    margin-top: 0;
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.project-box p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    text-align: left;
 }
 
 /* Botões e Bloco de Descrição */
@@ -376,4 +410,5 @@ footer p {
     hr.left-hr { margin: 0 auto 30px auto; }
     h2 { text-align: center; font-size: 1.8rem; }
     section.container { margin: 15px 10px; padding: 30px 15px; }
+    .project-box h3, .project-box p { text-align: center; }
 }
